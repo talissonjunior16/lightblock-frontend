@@ -1,14 +1,275 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LightBlock</title>
+    <link rel="icon" href="https://light-block-app.s3.us-east-2.amazonaws.com/favicon.ico" type="image/x-icon">
+
+    <title>Light Block</title>
+
+
+    <!-- Styles for the page -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+        html,
+        body {
+            font-family:  "Roboto", sans-serif;
+            height: 100%;
+            padding: 0;
+            margin: 0;
+            background-color: white;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            padding: 15px 20px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .public-content-page {
+            margin-left: auto;
+            margin-right: auto;
+            flex-direction: column;
+            display: flex;
+            padding-top: 20px;
+            margin-bottom: 60px;
+            align-items: flex-start;
+            gap: 30px;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+
+        .text-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .option {
+            font-size: 14px;
+            color: rgb(61, 61, 61);
+            cursor: pointer;
+        }
+
+        .option.active {
+            color: black;
+            font-weight: bold;
+        }
+
+        .vertical-divider {
+            display: flex;
+            height: 1px;
+            width: 100%;
+            background-color: #222222;
+        }
+
+        .content {
+            display: flex;
+            flex-grow: 1;
+        }
+
+        .standard-flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gap-40 {
+            gap: 40px;
+        }
+
+        .gap-20 {
+            gap: 20px;
+        }
+
+        .body-content {
+            color: #000000;
+            font-size: 14px;
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .body-content li {
+            margin-bottom: 10px;
+        }
+
+        .heading-1 {
+            font-size: 32px;
+            font-weight: bold;
+            color: black;
+        }
+
+        .heading-2 {
+            font-size: 20px;
+            color: rgb(30 30 30);
+        }
+
+        .last-update {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .last-update span {
+            font-size: 14px;
+            color: rgb(128, 128, 128);
+        }
+
+        /* Basic styling for sections */
+        .content-section {
+            display: none; /* Initially hide both sections */
+        }
+
+        /* When active, show the section */
+        .active-section {
+            display: block;
+        }
+
+        /* Styling for the content */
+        .standard-flex-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-title {
+            font-size: 15px;
+            color: white;
+        }
+
+        .app-name {
+           width: 100%;
+           display: flex;
+           align-items: center;
+           justify-content: space-between;
+
+           img {
+            height: 40px;
+           }
+        }
+
+        svg-icon {
+            width: 25px;
+            height: 25px;
+        }
+    </style>
 </head>
-
 <body>
+    <main class="main-content">
 
+        <header class="top-bar">
+            <div class="app-name">
+                <span class="app-title">Light Block</span>
+                <img src="https://light-block-app.s3.us-east-2.amazonaws.com/logo.png" alt="">
+            </div>
+        </header>
+
+        <section class="public-content-page">
+    
+            <!-- Navigation Menu -->
+            <nav class="text-list">
+                <span class="option active" id="configuracoes-tab">
+                    Política de Privacidade
+                </span>
+            </nav>
+    
+            <!-- Vertical Divider -->
+            <div class="vertical-divider"></div>
+    
+           <!-- Main Content -->
+           <article class="content" id="content-area">
+                <!-- Content Sections -->
+
+                <div class="content-section active-section" id="configuracoes-content">
+                    <div class="standard-flex-column gap-20">
+                        <header class="standard-flex-column gap-10">
+                            <span class="standard-text-style heading-1">Política de Privacidade</span>
+                            <time class="last-update" datetime="2025-04-21">
+                                <span>
+                                    Última atualização: 23 de Maio de 2025
+                                </span>
+                            </time>
+                        </header>
+                        <section class="standard-flex-column">
+                            <span class="standard-text-style heading-2">Privacidade e Segurança dos Seus Dados</span>
+                            <p class="body-content">
+                                A sua privacidade é importante para nós. No <b>Light Block</b>, respeitamos a sua privacidade e nos comprometemos a proteger quaisquer dados mínimos que possam ser coletados por meio da exibição de anúncios. Este jogo não exige login, não coleta dados pessoais diretamente e não requer conexão com a internet para funcionar.
+                            </p>
+
+                            <span class="standard-text-style heading-2">1. Informações que Coletamos</span>
+                            <ul class="body-content">
+                                <li><strong>Dados de Publicidade:</strong> O <b>Light Block</b> pode exibir anúncios através de redes de terceiros (por exemplo, Google AdMob), que podem coletar identificadores anônimos do dispositivo para fins de personalização de anúncios e análise.</li>
+                                <li><strong>Informações Pessoais:</strong> Nenhuma informação pessoal é coletada diretamente por nós.</li>
+                                <li><strong>Conexão com Internet:</strong> O jogo funciona offline, porém a exibição de anúncios requer acesso à internet.</li>
+                            </ul>
+
+                            <span class="standard-text-style heading-2">2. Como Usamos suas Informações</span>
+                            <ul class="body-content">
+                                <li><strong>Publicidade:</strong> As informações coletadas pelas plataformas de anúncios são utilizadas exclusivamente para personalizar e apresentar anúncios relevantes.</li>
+                                <li><strong>Melhoria da Experiência:</strong> Podemos utilizar dados agregados (sem identificação pessoal) para entender melhor como o jogo é utilizado e melhorar futuras atualizações.</li>
+                            </ul>
+
+                            <span class="standard-text-style heading-2">3. Compartilhamento de Informações</span>
+                            <p class="body-content">
+                                O <b>Light Block</b> não compartilha dados com terceiros diretamente. Contudo, redes de publicidade utilizadas no app podem coletar e processar dados conforme suas próprias políticas de privacidade. Recomendamos consultar as políticas dessas plataformas (como Google AdMob).
+                            </p>
+
+                            <span class="standard-text-style heading-2">4. Segurança dos Seus Dados</span>
+                            <p class="body-content">
+                                Como não coletamos informações pessoais diretamente, não armazenamos dados sensíveis. Os dados utilizados por terceiros são protegidos conforme os protocolos de segurança dessas plataformas.
+                            </p>
+
+                            <span class="standard-text-style heading-2">5. Seus Direitos</span>
+                            <ul class="body-content">
+                                <li><strong>Gerenciamento de Dados de Anúncios:</strong> Você pode limitar ou desativar a personalização de anúncios nas configurações do seu dispositivo móvel.</li>
+                            </ul>
+
+                            <span class="standard-text-style heading-2">6. Alterações nesta Política de Privacidade</span>
+                            <p class="body-content">
+                                O <b>Light Block</b> pode atualizar esta Política de Privacidade ocasionalmente. Recomendamos que você revise esta página periodicamente para se manter informado sobre quaisquer alterações.
+                            </p>
+                        </section>
+                    </div>
+                </div>
+            </article>
+    
+        </section>
+    
+    </main>
+
+    <!-- JavaScript for tab switching -->
+    <script>
+        const removerContaTab = document.getElementById("remover-conta-tab");
+        const configuracoesTab = document.getElementById("configuracoes-tab");
+        const removerContaContent = document.getElementById("remover-conta-content");
+        const configuracoesContent = document.getElementById("configuracoes-content");
+
+        removerContaTab.addEventListener("click", () => {
+            // Make "Remover Conta" tab active
+            removerContaTab.classList.add("active");
+            configuracoesTab.classList.remove("active");
+
+            // Show the "Remover Conta" content and hide the other
+            removerContaContent.classList.add("active-section");
+            configuracoesContent.classList.remove("active-section");
+        });
+
+        configuracoesTab.addEventListener("click", () => {
+            // Make "Política de Privacidade" tab active
+            configuracoesTab.classList.add("active");
+            removerContaTab.classList.remove("active");
+
+            // Show the "Política de Privacidade" content and hide the other
+            configuracoesContent.classList.add("active-section");
+            removerContaContent.classList.remove("active-section");
+        });
+    </script>
 </body>
-
 </html>
